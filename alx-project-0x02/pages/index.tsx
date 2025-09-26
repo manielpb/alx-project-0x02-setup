@@ -1,7 +1,7 @@
-import React from "react";
+import Header from "@/components/layout/Header"
 
 export default function welcome(){
   return (
-    <p>Hello mf</p>
+    <Header />
   )
 }

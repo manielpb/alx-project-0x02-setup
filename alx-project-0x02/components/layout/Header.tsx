@@ -1,6 +1,4 @@
-import React from 'react';
-import about from '@/pages/about';
-import home from '@/pages/home';
+import Link from "next/link"
 
 export default function Header(){
 
@@ -8,10 +6,10 @@ export default function Header(){
         <>
             <header>
                 <nav>
-                    <a href='home'>Home</a>
-                    <a href='about'>About</a>
+                  <Link href="/">Home</Link>
+                  <Link href="/about">About</Link>
                 </nav>
             </header>
         </>
-    )
+    );
 }
