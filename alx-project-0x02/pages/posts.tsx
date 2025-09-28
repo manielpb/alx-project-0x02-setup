@@ -8,21 +8,22 @@ type PostsPageProps = {
 };
 
 export default function PostsPage({ posts }: PostsPageProps) {
-
   return (
     <>
-    <Header />
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-6">Posts</h1>
-      {posts.map((post) => (
-        <PostCard
-          key={post.title} 
-          title={post.title}
-          content={post.content}
-          userId={post.userId}
-        />
-      ))}
-    </div>
+      <Header />
+      <main className="max-w-6xl mx-auto p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center">Posts</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {posts.map((post) => (
+            <PostCard
+              key={post.title}
+              title={post.title}
+              content={post.content}
+              userId={post.userId}
+            />
+          ))}
+        </div>
+      </main>
     </>
   );
 

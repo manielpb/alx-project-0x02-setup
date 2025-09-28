@@ -23,5 +23,14 @@ export interface PostProps {
 export interface UserProps {
     name: string;
     email: string;
-    address: string
+    address: {
+        street: string;
+        suite: string;
+        city: string;
+        zipcode: number;
+        geo: {
+            lat: number;
+            lng: number
+        }
+    }
 }

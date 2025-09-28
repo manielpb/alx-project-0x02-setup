@@ -19,12 +19,15 @@ export default function(){
     return (
         <>
         <Header />
-          <h1>welcome to home page</h1>
-          <Card title="Property 1" content="choose this fast" />
+          <h1 className="text-3xl font-bold text-gray-800 mb-8 text-center">welcome to home page</h1>
+          
           {formData && (
-             <Card title={formData.title} content={formData.content} />
+             <Card title={formData.title} content={formData.content}  />
           )}
-          <button onClick={() => setIsModalOpen(true)}>Add Post</button>
+          <div className="flex justify-center items-center">
+             <button onClick={() => setIsModalOpen(true)} className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition ">Add Post</button>
+          </div>
+         
 
           {isModalOpen && (
             <PostModal 

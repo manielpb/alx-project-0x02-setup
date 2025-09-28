@@ -8,22 +8,24 @@ type UsersPageProps = {
 }
 
 export default function UsersPage({ users}: UsersPageProps){
-    return (
-        <>
-            <Header />
-            <div className="p-6">
-                <h1 className="text-2xl font-bold mb-6">users</h1> 
-                {users.map( (user) => (
-                    <UserCard
-                        key={user.name}
-                        name={user.name}
-                        email={user.email}
-                        address={user.address}
-                    />
-                ))}
-            </div>
-        </>
-    );
+return (
+    <>
+      <Header />
+      <main className="max-w-6xl mx-auto p-6">
+        <h1 className="text-3xl font-bold mb-6 text-center">Users</h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {users.map((user) => (
+            <UserCard
+              key={user.email}
+              name={user.name}
+              email={user.email}
+              address={user.address}
+            />
+          ))}
+        </div>
+      </main>
+    </>
+  );
 }
 
 export async function getStaticProps() {
