@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import Card from "@/components/common/Card";
 import { CardProps } from "@/interfaces";
 import PostModal from "@/components/common/PostModal";
+import Header from "@/components/layout/Header";
 
 export default function(){
   const [formData, setFormData] = useState<CardProps | null>(null);
@@ -17,6 +18,7 @@ export default function(){
 
     return (
         <>
+        <Header />
           <h1>welcome to home page</h1>
           <Card title="Property 1" content="choose this fast" />
           {formData && (

@@ -1,11 +1,14 @@
 import { type ButtonProps } from "@/interfaces";
 import { Children } from "react";
 
-export default function Button({
-    size= "medium",
-    shape="rounded-md",
-    children
-}: ButtonProps) {
+export default function Button({size, shape, children}
+: ButtonProps) {
+
+    const shapeClasses = {
+        "rounded-sm": "rounded-sm",
+        "rounded-md": "rounded-md",
+        "rounded-full": "rounded-full",
+    }
 
     const sizeClasses = {
         small: "px-2 py-1 text-sm",
@@ -15,7 +18,7 @@ export default function Button({
 
     return (
         <button
-            className={`bg-blue-500 text-white ${sizeClasses[size]} ${shape}`}
+            className={`bg-blue-500 text-white ${sizeClasses[size]} ${shapeClasses[shape]}`}
         >
             {children}
         </button>
